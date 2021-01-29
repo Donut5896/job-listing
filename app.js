@@ -45,32 +45,34 @@ const addTags = (data) => {
     theLanguage = data[i].languages
    //console.log(theRole)
    }
-   
+ 
 }
 
 function myFunction(){
-    tag = document.createElement("button")
-  // document.tags.innerHTML = "have anice day"
-  
-    for(let i=0; i< tags.length; i++){
+    //tag = document.createElement("button")
+    //document.tags.createElement = theRole ;
+   
+   //console.log();
+   for(let i=0; i< tags.length; i++){
 
        // tags[i].style.background = "red";
 
 
-
-
-        if(tags[i] === theRole){
-          tag.innerHTML = theRole;
-         searchBar.appendChild(tag);
-         
+ 
+ 
+        if(tags[i].onclick === theRole){
+          tags = document.createElement("button")
+          tags.innerHTML = theRole.innerText;
+         searchBar.appendChild(tags);
+         console.log(searchBar);
         }else if(tags[i] === theLevel){
-         tag.innerHTML = theLevel;
-         searchBar.appendChild(tag);
+         tags.innerHTML = theLevel.innerText;
+         searchBar.appendChild(tags);
         }
-    }
+   }
 }
 
-myFunction()
+ myFunction();
 
 
 const displayCharacters = (characters) => {
